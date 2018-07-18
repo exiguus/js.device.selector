@@ -1,0 +1,14 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "env": {
+      "es6": true,
+      "jasmine": true,
+      "jquery": true,
+      "qunit": true,
+      "node": true,
+      "browser": true
+  },
+  "parserOptions": {
+      "sourceType": "module",
+  }
+}

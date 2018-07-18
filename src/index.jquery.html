@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Device Selector jQuery Plugin</title>
+        <style>
+          [data-device-selector-item] {
+            display: none;
+          }
+          @media
+          only screen and (max-width: 768px) {
+            [data-device-selector-devicetype="mobile"] {
+              display: block !important;
+            }
+          }
+          @media
+          only screen and (min-width: 769px) and (max-width: 960px) {
+            [data-device-selector-devicetype="tablet"] {
+              display: block !important;
+            }
+          }
+          @media
+          only screen and (min-width: 961px) and (max-width: 1200px) {
+            [data-device-selector-devicetype="desktop"] {
+              display: block !important;
+            }
+          }
+          @media
+          only screen and (min-width: 1201px) {
+            [data-device-selector-devicetype="large-desktop"] {
+              display: block !important;
+            }
+          }
+          @media
+          only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (     -o-min-device-pixel-ratio: 2/1),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+            [data-device-selector-displaytype="retina"] {
+              display: block !important;
+            }
+          }
+        </style>
+    </head>
+    <body class="development">
+        <header>
+          <h1>Device Selector</h1>
+          <h2>jQuery Plugin</h2>
+        </header>
+
+        <main>
+          <article>
+            <h2>Select Device Type</h2>
+            <p>DeviceType: <tt id="deviceType"></tt></p>
+            <h2>Select Display Type</h2>
+            <p>DisplayType: <tt id="displayType"></tt></p>
+            <h2>CSS</h2>
+<pre>
+  <code>
+    &lt;style&gt;
+      [data-device-selector-item] {
+        display: none;
+      }
+      @media
+      only screen and (max-width: 768px) {
+        [data-device-selector-devicetype=&quot;mobile&quot;] {
+          display: block !important;
+        }
+      }
+      @media
+      only screen and (min-width: 769px) and (max-width: 960px) {
+        [data-device-selector-devicetype=&quot;tablet&quot;] {
+          display: block !important;
+        }
+      }
+      @media
+      only screen and (min-width: 961px) and (max-width: 1200px) {
+        [data-device-selector-devicetype=&quot;desktop&quot;] {
+          display: block !important;
+        }
+      }
+      @media
+      only screen and (min-width: 1201px) {
+        [data-device-selector-devicetype=&quot;large-desktop&quot;] {
+          display: block !important;
+        }
+      }
+      @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        [data-device-selector-displaytype=&quot;retina&quot;] {
+          display: block !important;
+        }
+      }
+    &lt;/style&gt;
+  </code>
+</pre>
+            <h2>Markup</h2>
+<pre>
+  <code>
+    &lt;div data-device-selector&gt;
+      &lt;div data-device-selector-item data-device-selector-devicetype=&quot;mobile&quot;&gt;&lt;/div&gt;
+      &lt;div data-device-selector-item data-device-selector-devicetype=&quot;tablet&quot;&gt;&lt;/div&gt;
+      &lt;div data-device-selector-item data-device-selector-devicetype=&quot;desktop&quot;&gt;&lt;/div&gt;
+      &lt;div data-device-selector-item data-device-selector-devicetype=&quot;large-desktop&quot;&gt;&lt;/div&gt;
+      &lt;div data-device-selector-item data-device-selector-displaytype=&quot;retina&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  </code>
+</pre>
+            <h2>JavaScript</h2>
+<pre>
+  <code>
+    &lt;script&gt;
+      $.fn.deviceSelector();
+      // var config = {
+      //   &#39;selector&#39;: {
+      //     &#39;name&#39;: &#39;namespace__m-device-selector&#39;,
+      //     &#39;parent&#39;: {
+      //       &#39;name&#39;: &#39;body&#39;,
+      //     },
+      //     &#39;item&#39;: {
+      //       &#39;name&#39;: &#39;namespace__m-device-selector__item&#39;,
+      //     },
+      //   },
+      //   &#39;device&#39;: {
+      //     &#39;selector&#39;: {
+      //       &#39;name&#39;: &#39;data-ds-devicetype&#39;,
+      //     },
+      //   },
+      //   &#39;display&#39;: {
+      //     &#39;selector&#39;: {
+      //       &#39;name&#39;: &#39;data-ds-displaytype&#39;,
+      //     },
+      //   },
+      // };
+      // $.fn.deviceSelector(config);
+      $(&#39;#deviceType&#39;).text($.fn.deviceSelector.getDeviceType());
+      $(&#39;#displayType&#39;).text($.fn.deviceSelector.getDisplayType());
+    &lt;/script&gt;
+  </code>
+</pre>
+
+          </article>
+        </main>
+        <!-- <div class="namespace">
+          <div class="namespace__m-device-selector">
+            <div class="namespace__m-device-selector__item" data-ds-devicetype="mobile"></div>
+            <div class="namespace__m-device-selector__item" data-ds-devicetype="tablet"></div>
+            <div class="namespace__m-device-selector__item" data-ds-devicetype="desktop"></div>
+            <div class="namespace__m-device-selector__item" data-ds-devicetype="large-desktop"></div>
+            <div class="namespace__m-device-selector__item" data-ds-displaytype="retina"></div>
+          </div>
+        </div> -->
+        <div data-device-selector>
+          <div data-device-selector-item data-device-selector-devicetype="mobile"></div>
+          <div data-device-selector-item data-device-selector-devicetype="tablet"></div>
+          <div data-device-selector-item data-device-selector-devicetype="desktop"></div>
+          <div data-device-selector-item data-device-selector-devicetype="large-desktop"></div>
+          <div data-device-selector-item data-device-selector-displaytype="retina"></div>
+        </div>
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="js/jquery.device.selector.js"></script>
+        <script>
+          $.fn.deviceSelector();
+          // $.fn.deviceSelector({
+          //   'selector': {
+          //     'name': '.namespace__m-device-selector',
+          //     'parent': {
+          //       'name': '.namespace',
+          //     },
+          //     'item': {
+          //       'name': '.namespace__m-device-selector__item',
+          //     },
+          //   },
+          //   'device': {
+          //     'selector': {
+          //       'name': 'data-ds-devicetype',
+          //     },
+          //   },
+          //   'display': {
+          //     'selector': {
+          //       'name': 'data-ds-displaytype',
+          //     },
+          //   },
+          // });
+          console.log($.fn.deviceSelector.getDeviceType());
+          $('#deviceType').text($.fn.deviceSelector.getDeviceType());
+          $('#displayType').text($.fn.deviceSelector.getDisplayType());
+        </script>
+    </body>
+</html>

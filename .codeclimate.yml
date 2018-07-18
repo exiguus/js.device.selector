@@ -1,0 +1,19 @@
+exclude_patterns:
+- "tests/"
+- "build/"
+- "coverage/"
+- "dist/"
+- "docs/"
+- "node_modules/"
+- "."
+- "Gruntfile.js"
+- "jsdoc.json"
+- "*.md"
+- "karma.*"
+- "LICENSE"
+- "package*"
+- "webpack.*"
+eslint:
+  enabled: true
+  config:
+    config: .eslintrc
