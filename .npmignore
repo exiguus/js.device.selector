@@ -1,8 +1,10 @@
 build/
+example/
 src/
 node_modules/
 static/
 target/
+tests/
 coverage/
 .git
 .babelrc

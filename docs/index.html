@@ -1,56 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Device Selector &mdash; jQuery Plugin</title>
+        <meta name="description" content="Device Selector &mdash; jQuery Plugin :: Make your CSS Breakpoints available in JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body class="development">
+      <header>
+        <h1>Device Selector</h1>
+        <h2>ES6 Class and jQuery Plugin</h2>
+        <p>Make your CSS Breakpoints available in JavaScript</p>
+        <div class="logo">
+          <svg aria-hidden="true" data-icon="mobile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mobile"><path fill="currentColor" d="M192 416c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zM320 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h224c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V48z"></path></svg>
+          <svg aria-hidden="true" data-icon="tablet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="tablet"><path fill="currentColor" d="M256 416c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-21.3 14.3-32 32-32s32 14.3 32 32zM448 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h352c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V48z"></path></svg>
+          <svg aria-hidden="true" data-icon="desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="desktop"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v288c0 26.5 21.5 48 48 48h192l-24 96h-72c-8.8 0-16 7.2-16 16s7.2 16 16 16h288c8.8 0 16-7.2 16-16s-7.2-16-16-16h-72l-24-96h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM249 480l16-64h46l16 64h-78zm295-144c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h480c8.8 0 16 7.2 16 16v288z"></path></svg>
+          <svg aria-hidden="true" data-icon="large-desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="large-desktop"><path fill="currentColor" d="M592 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h256v64H144c-8.8 0-16 7.2-16 16s7.2 16 16 16h352c8.8 0 16-7.2 16-16s-7.2-16-16-16H336v-64h256c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm16 368c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h544c8.8 0 16 7.2 16 16v320z"></path></svg>
+        </div>
+      </header>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
+      <main>
 
-<body>
+        
+          <article>
+            <section>
+              <h2>Select Device Type</h2>
+              <dl>
+                <dt>DeviceType</dt>
+                <dd><code id="deviceType">not set</code></dd>
+                <dt>WindowInnerWidth</dt>
+                <dd><code id="windowInnerWidth">not set</code></dd>
+              </dl>
+              <h2>Select Display Type</h2>
+              <dl>
+                <dt>DisplayType</dt>
+                <dd><code id="displayType">not set</code></dd>
+              </dl>
+            </section>
+            <section>
+              <h2>NPM</h2>
+              <dl>
+                <dt>installation</dt>
+                <dd><code>npm install js.device.selector --save</code></dd>
+              </dl>
 
-<div id="main">
+              <h2>GIT</h2>
+              <dl>
+                <dt>ZIP</dt>
+                <dd><a href="https://github.com/exiguus/js.device.selector/archive/v1.0.0.zip" title="Github Release ZIP"><code>https://github.com/exiguus/js.device.selector/archive/v1.0.0.zip</code></a></dd>
+                <dt>GZIP</dt>
+                <dd><a href="https://github.com/exiguus/js.device.selector/archive/v1.0.0.tar.gz" title="Github Release GZIP"><code>https://github.com/exiguus/js.device.selector/archive/v1.0.0.tar.gz</code></a></dd>
 
-    <h1 class="page-title">Home</h1>
+              </dl>
 
-    
+            </section>
 
+              <h2>Usage</h2>
 
-
-    
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    <section>
-        <article><p><a href="https://travis-ci.org/exiguus/js.device.selector"><img src="https://img.shields.io/travis/exiguus/js.device.selector/master.svg" alt="tests"></a>
-<a href="https://codeclimate.com/github/exiguus/js.device.selector/test_coverage"><img src="https://api.codeclimate.com/v1/badges/8b7c86a67b5706e9be47/test_coverage" alt="coverage"></a>
-<a href="https://codeclimate.com/github/exiguus/js.device.selector/maintainability"><img src="https://api.codeclimate.com/v1/badges/8b7c86a67b5706e9be47/maintainability" alt="maintainability"></a></p>
-<h1>js.device.selector</h1><p>ES6 class, module and jQuery Plugin to get the current Device Type and Display Type of a Browser while making CSS Breakpoints available in the JavaScript.</p>
-<h2>npm</h2><p><a href="https://npmjs.com/package/js.device.selector"><img src="https://img.shields.io/npm/v/js.device.selector.svg" alt="npm"></a></p>
-<pre class="prettyprint source"><code>npm install --save js.device.selector</code></pre><h2>Example</h2><h3>jQuery plugin</h3><p>Style for hidden Markup that make CSS Breakpoints available in JavaScript via Media-Queries and visibility.</p>
-<pre class="prettyprint source lang-html"><code>&lt;style>
-
+              <h3>CSS</h3>
+<pre>
+  <code>
+&lt;style&gt;
   [data-device-selector-item] {
     display: none;
   }
@@ -89,393 +101,227 @@
       display: block !important;
     }
   }
-&lt;/style></code></pre><p> Markup which make the visibility of Breakpoints available in JavaScript. The Markup should be added right before the closing body tag.</p>
-<pre class="prettyprint source lang-html"><code>&lt;div data-device-selector>
-  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;mobile&quot;>&lt;/div>
-  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;tablet&quot;>&lt;/div>
-  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;desktop&quot;>&lt;/div>
-  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;large-desktop&quot;>&lt;/div>
-  &lt;div data-device-selector-item data-device-selector-displaytype=&quot;retina&quot;>&lt;/div>
-&lt;/div></code></pre><p>Initialise the jQuery Plugin and sample usage.</p>
-<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;../node_modules/jquery/dist/jquery.min.js&quot;>&lt;/script>
-&lt;script src=&quot;../node_modules/js.device.selector/jquery.device.selector.min.js&quot;>&lt;/script>
-&lt;script>
-  $.fn.deviceSelector();
-  console.log($.fn.deviceSelector.getDeviceType()); // return mobile || tablet || desktop || large-desktop
-  $('#deviceType').text($.fn.deviceSelector.getDeviceType());
-  $('#displayType').text($.fn.deviceSelector.getDisplayType());
-&lt;/script></code></pre><h3>jQuery Plugin Custom</h3><p>Use your own flavored Markup and pass your own settings to the Device Selector.</p>
-<pre class="prettyprint source lang-html"><code>&lt;style>
-
-  .namespace__m-device-selector__item {
-    display: none;
-  }
-  @media
-  only screen and (max-width: 768px) {
-    [data-ds-devicetype=&quot;m&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (min-width: 769px) and (max-width: 960px) {
-    [data-ds-devicetype=&quot;t&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (min-width: 961px) and (max-width: 1200px) {
-    [data-ds-devicetype=&quot;md&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (min-width: 1201px) {
-    [data-ds-devicetype=&quot;ld&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
-    [data-ds-displaytype=&quot;rt&quot;] {
-      display: block !important;
-    }
-  }
-&lt;/style>
-&lt;div class=&quot;namespace&quot;>
-  &lt;div class=&quot;namespace__m-device-selector&quot;>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;m&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;t&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;md&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;lg&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-displaytype=&quot;rt&quot;>&lt;/div>
-  &lt;/div>
-&lt;/div>
-&lt;script>
-  $.fn.deviceSelector({
-    'selector': {
-      'name': '.namespace__m-device-selector',
-      'parent': {
-        'name': 'body',
-      },
-      'item': {
-        'name': '.namespace__m-device-selector__item',
-      },
-    },
-    'device': {
-      'selector': {
-        'name': 'data-ds-devicetype',
-      },
-    },
-    'display': {
-      'selector': {
-        'name': 'data-ds-displaytype',
-      },
-    },
-  });
-  console.log($.fn.deviceSelector.getDeviceType()); // return m || t || md || lg
-  $('#deviceType').text($.fn.deviceSelector.getDeviceType());
-  $('#displayType').text($.fn.deviceSelector.getDisplayType());
-&lt;/script></code></pre><h3>ES6</h3><pre class="prettyprint source lang-html"><code>&lt;style>
-
-  .namespace__m-device-selector__item {
-    display: none;
-  }
-  @media
-  only screen and (max-width: 768px) {
-    [data-ds-devicetype=&quot;m&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (min-width: 769px) and (max-width: 960px) {
-    [data-ds-devicetype=&quot;t&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (min-width: 961px) and (max-width: 1200px) {
-    [data-ds-devicetype=&quot;md&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (min-width: 1201px) {
-    [data-ds-devicetype=&quot;ld&quot;] {
-      display: block !important;
-    }
-  }
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
-    [data-ds-displaytype=&quot;rt&quot;] {
-      display: block !important;
-    }
-  }
-&lt;/style>
-&lt;div class=&quot;namespace&quot;>
-  &lt;div class=&quot;namespace__m-device-selector&quot;>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;m&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;t&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;md&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;lg&quot;>&lt;/div>
-    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-displaytype=&quot;rt&quot;>&lt;/div>
-  &lt;/div>
-&lt;/div></code></pre><pre class="prettyprint source lang-js"><code>import DeviceSelector from './js/device.selector.class';
+&lt;/style&gt;
+  </code>
+</pre>
+              <h3>Markup</h3>
+<pre>
+  <code>
+&lt;div data-device-selector&gt;
+  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;mobile&quot;&gt;&lt;/div&gt;
+  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;tablet&quot;&gt;&lt;/div&gt;
+  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;desktop&quot;&gt;&lt;/div&gt;
+  &lt;div data-device-selector-item data-device-selector-devicetype=&quot;large-desktop&quot;&gt;&lt;/div&gt;
+  &lt;div data-device-selector-item data-device-selector-displaytype=&quot;retina&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+  </code>
+</pre>
+              <h3>JavaScript</h3>
+<pre>
+  <code>
+// app
+import DeviceSelector from &#39;js.device.selector&#39;;
 const deviceSelector = new DeviceSelector();
 
-console.log(deviceSelector.settings); // eslint-disable-line no-console
-console.log(deviceSelector.deviceType()); // eslint-disable-line no-console
-console.log(deviceSelector.displayType()); // eslint-disable-line no-console
+// mobile || tablet || desktop || large-desktop
+console.log(deviceSelector.deviceType());
+// retina || undefined
+console.log(deviceSelector.displayType());
+  </code>
+</pre>
+<pre>
+  <code>
+&lt;script src=&quot;../node_modules/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../node_modules/js.device.selector/dist/jquery.device.selector.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  $.fn.deviceSelector();
+  // mobile || tablet || desktop || large-desktop
+  console.log($.fn.deviceSelector.getDeviceType());
+  // retina || undefined
+  console.log($.fn.deviceSelector.getDisplayType());
+&lt;/script&gt;
+  </code>
+</pre>
+            </section>
+          </section>
 
-document.querySelector('#deviceType').innerHTML = deviceSelector.deviceType();
-document.querySelector('#displayType').innerHTML = deviceSelector.displayType();</code></pre><h2>Documentation</h2><ul>
-<li><a href="https://exiguus.github.io/js.device.selector/">jsDoc</a></li>
-<li><a href="https://exiguus.github.io/js.device.selector/coverage/es6/">Coverage ES6</a></li>
-<li><a href="https://exiguus.github.io/js.device.selector/coverage/jquery/">Coverage jQuery</a></li>
-</ul></article>
-    </section>
+            <h2>Custom Usage</h2>
+
+            <h3>CSS</h3>
+<pre>
+<code>
+&lt;style&gt;
+.namespace__m-device-selector__item {
+  display: none;
+}
+@media
+only screen and (max-width: 768px) {
+  [data-ds-devicetype=&quot;m&quot;] {
+    display: block !important;
+  }
+}
+@media
+only screen and (min-width: 769px) and (max-width: 960px) {
+  [data-ds-devicetype=&quot;t&quot;] {
+    display: block !important;
+  }
+}
+@media
+only screen and (min-width: 961px) and (max-width: 1200px) {
+  [data-ds-devicetype=&quot;sm&quot;] {
+    display: block !important;
+  }
+}
+@media
+only screen and (min-width: 1201px) {
+  [data-ds-devicetype=&quot;lg&quot;] {
+    display: block !important;
+  }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  [data-ds-displaytype=&quot;retina&quot;] {
+    display: block !important;
+  }
+}
+&lt;/style&gt;
+</code>
+</pre>
+            <h3>Markup</h3>
+<pre>
+<code>
+&lt;div class=&quot;namespace&quot;&gt;
+  &lt;div class=&quot;namespace__m-device-selector&quot;&gt;
+    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;m&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;t&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;sm&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;lg&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-displaytype=&quot;retina&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+            <h3>JavaScript</h3>
+<pre>
+<code>
+// app
+import DeviceSelector from &#39;js.device.selector&#39;;
+const deviceSelector = new DeviceSelector({
+  &#39;selector&#39;: {
+    &#39;name&#39;: &#39;.namespace__m-device-selector&#39;,
+    &#39;parent&#39;: {
+      &#39;name&#39;: &#39;body&#39;,
+    },
+    &#39;items&#39;: {
+      &#39;name&#39;: &#39;.namespace__m-device-selector__item&#39;,
+    },
+  },
+  &#39;device&#39;: {
+    &#39;selector&#39;: {
+      &#39;name&#39;: &#39;data-ds-devicetype&#39;,
+    },
+  },
+  &#39;display&#39;: {
+    &#39;selector&#39;: {
+      &#39;name&#39;: &#39;data-ds-displaytype&#39;,
+    },
+  },
+});
+
+// m || t || sm || lg
+console.log(deviceSelector.deviceType());
+// retina || undefined
+console.log(deviceSelector.displayType());
+</code>
+</pre>
+<pre>
+<code>
+&lt;script src=&quot;../node_modules/jquery/dist/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;../node_modules/js.device.selector/dist/jquery.device.selector.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$.fn.deviceSelector({
+  &quot;selector&quot;: {
+    &quot;name&quot;: &quot;.namespace__m-device-selector&quot;,
+    &quot;parent&quot;: {
+      &quot;name&quot;: &quot;.namespace&quot;,
+    },
+    &quot;items&quot;: {
+      &quot;name&quot;: &quot;.namespace__m-device-selector__item&quot;,
+    },
+  },
+  &quot;device&quot;: {
+    &quot;selector&quot;: {
+      &quot;name&quot;: &quot;data-ds-devicetype&quot;,
+    },
+  },
+  &quot;display&quot;: {
+    &quot;selector&quot;: {
+      &quot;name&quot;: &quot;data-ds-displaytype&quot;,
+    },
+  },
+});
+// mobile || tablet || desktop || large-desktop
+console.log($.fn.deviceSelector.getDeviceType());
+// retina || undefined
+console.log($.fn.deviceSelector.getDisplayType());
+&lt;/script&gt;
+</code>
+</pre>
+          </section>
+          </article>
 
 
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>device.selector.class.js</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">device selector
-  Get the current Display and Device Type of a Browser</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-    <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>1.0.0</li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
+      </main>
+      <footer>
         <ul>
-            <li><a href="mailto:npm@0x38.de">Simon Gattner</a></li>
+          <li><a title="Github" href="https://github.com/exiguus/js.device.selector">git</a></li>
+          <li><a title="NPM JS" href="https://www.npmjs.com/package/js.device.selector">npm</a></li>
+          <li><a title="JSDOC" href="https://exiguus.github.io/js.device.selector/jsdoc/index.html">docs</a></li>
+          <li><a title="Coverage jQuery lcov-report" href="https://exiguus.github.io/js.device.selector/coverage/es6/index.html">jQuery coverage</a></li>
+          <li><a title="Coverage es6 lcov-report" href="https://exiguus.github.io/js.device.selector/coverage/es6/index.html">es6 coverage</a></li>
+          <li><a title="License MIT" href="https://github.com/exiguus/js.device.selector/blob/master/LICENSE">MIT license</a></li>
         </ul>
-    </dd>
-    
-
-    
-
-    
-    <dt class="tag-license">License:</dt>
-    <dd class="tag-license"><ul class="dummy"><li>MIT</li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="device.selector.class.js.html">device.selector.class.js</a>, <a href="device.selector.class.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>jquery.device.selector.js</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description">device selector
-  Get the current Display and Device Type of a Browser</div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-    <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>1.0.0</li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li><a href="mailto:npm@0x38.de">Simon Gattner</a></li>
-        </ul>
-    </dd>
-    
-
-    
-
-    
-    <dt class="tag-license">License:</dt>
-    <dd class="tag-license"><ul class="dummy"><li>MIT</li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="jquery.device.selector.js.html">jquery.device.selector.js</a>, <a href="jquery.device.selector.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-_jQuery.fn.deviceSelector_.html">jQuery.fn.deviceSelector</a></li><li><a href="external-_jQuery.fn_.html">jQuery.fn</a></li></ul><h3>Classes</h3><ul><li><a href="DeviceSelector.html">DeviceSelector</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Jul 18 2018 19:51:42 GMT+0200 (CEST)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
+        <p>
+          <a href="https://github.com/exiguus/js.device.selector" title="Device Selector &mdash; Make your CSS Breakpoints available in JavaScript">
+            <span class="logo">
+              <svg aria-hidden="true" data-icon="javascript" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="javascript"><path fill="currentColor" d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
+            </span>
+            Device Selector
+          </a>
+        </p>
+      </footer>
+      <div data-device-selector>
+        <div data-device-selector-item data-device-selector-devicetype="mobile"></div>
+        <div data-device-selector-item data-device-selector-devicetype="tablet"></div>
+        <div data-device-selector-item data-device-selector-devicetype="desktop"></div>
+        <div data-device-selector-item data-device-selector-devicetype="large-desktop"></div>
+        <div data-device-selector-item data-device-selector-displaytype="retina"></div>
+      </div>
+      <script src="static/js/jquery/dist/jquery.min.js"></script>
+      <script src="static/js/js.device.selector/jquery.device.selector.min.js"></script>
+      <script async>
+        $(document).ready(updateDomContent);
+        $(window).on('resize', updateDomContent);
+        function updateDomContent() {
+          $.fn.deviceSelector();
+          $('#deviceType').text($.fn.deviceSelector.getDeviceType());
+          $('#displayType').text($.fn.deviceSelector.getDisplayType());
+          $('#windowInnerWidth').text(window.innerWidth + 'px');
+          $('.logo svg').css('opacity', '.7');
+          $('.logo svg.' + $.fn.deviceSelector.getDeviceType()).css('opacity', '1');
+        }
+      </script>
+      <script async>
+        var link = document.createElement( 'link' );
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css';
+        link.rel = 'stylesheet';document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script async>hljs.initHighlightingOnLoad();</script>
+  </body>
 </html>

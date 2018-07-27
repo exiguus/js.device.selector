@@ -1,0 +1,254 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+          <article>
+            <section>
+              <h2>Select Device Type</h2>
+              <dl>
+                <dt>DeviceType</dt>
+                <dd><code id="deviceType">not set</code></dd>
+                <dt>WindowInnerWidth</dt>
+                <dd><code id="windowInnerWidth">not set</code></dd>
+              </dl>
+              <h2>Select Display Type</h2>
+              <dl>
+                <dt>DisplayType</dt>
+                <dd><code id="displayType">not set</code></dd>
+              </dl>
+            </section>
+            <section>
+              <h2>NPM</h2>
+              <dl>
+                <dt>installation</dt>
+                <dd><code>npm install js.device.selector --save</code></dd>
+              </dl>
+
+              <h2>GIT</h2>
+              <dl>
+                <dt>ZIP</dt>
+                <dd><a href="https://github.com/exiguus/js.device.selector/archive/v1.0.0.zip" title="Github Release ZIP"><code>https://github.com/exiguus/js.device.selector/archive/v1.0.0.zip</code></a></dd>
+                <dt>GZIP</dt>
+                <dd><a href="https://github.com/exiguus/js.device.selector/archive/v1.0.0.tar.gz" title="Github Release GZIP"><code>https://github.com/exiguus/js.device.selector/archive/v1.0.0.tar.gz</code></a></dd>
+
+              </dl>
+
+            </section>
+
+              <h2>Usage</h2>
+
+              <h3>CSS</h3>
+<pre>
+  <code>
+{{ '<style>
+  [data-device-selector-item] {
+    display: none;
+  }
+  @media
+  only screen and (max-width: 768px) {
+    [data-device-selector-devicetype="mobile"] {
+      display: block !important;
+    }
+  }
+  @media
+  only screen and (min-width: 769px) and (max-width: 960px) {
+    [data-device-selector-devicetype="tablet"] {
+      display: block !important;
+    }
+  }
+  @media
+  only screen and (min-width: 961px) and (max-width: 1200px) {
+    [data-device-selector-devicetype="desktop"] {
+      display: block !important;
+    }
+  }
+  @media
+  only screen and (min-width: 1201px) {
+    [data-device-selector-devicetype="large-desktop"] {
+      display: block !important;
+    }
+  }
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    [data-device-selector-displaytype="retina"] {
+      display: block !important;
+    }
+  }
+</style>' | escape }}
+  </code>
+</pre>
+              <h3>Markup</h3>
+<pre>
+  <code>
+{{'<div data-device-selector>
+  <div data-device-selector-item data-device-selector-devicetype="mobile"></div>
+  <div data-device-selector-item data-device-selector-devicetype="tablet"></div>
+  <div data-device-selector-item data-device-selector-devicetype="desktop"></div>
+  <div data-device-selector-item data-device-selector-devicetype="large-desktop"></div>
+  <div data-device-selector-item data-device-selector-displaytype="retina"></div>
+</div>' | escape }}
+  </code>
+</pre>
+              <h3>JavaScript</h3>
+<pre>
+  <code>
+{{"// app
+import DeviceSelector from 'js.device.selector';
+const deviceSelector = new DeviceSelector();
+
+// mobile || tablet || desktop || large-desktop
+console.log(deviceSelector.deviceType());
+// retina || undefined
+console.log(deviceSelector.displayType());" | escape }}
+  </code>
+</pre>
+<pre>
+  <code>
+{{'<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/js.device.selector/dist/jquery.device.selector.js"></script>
+<script>
+  $.fn.deviceSelector();
+  // mobile || tablet || desktop || large-desktop
+  console.log($.fn.deviceSelector.getDeviceType());
+  // retina || undefined
+  console.log($.fn.deviceSelector.getDisplayType());
+</script>' | escape }}
+  </code>
+</pre>
+            </section>
+          </section>
+
+            <h2>Custom Usage</h2>
+
+            <h3>CSS</h3>
+<pre>
+<code>
+{{ '<style>
+.namespace__m-device-selector__item {
+  display: none;
+}
+@media
+only screen and (max-width: 768px) {
+  [data-ds-devicetype="m"] {
+    display: block !important;
+  }
+}
+@media
+only screen and (min-width: 769px) and (max-width: 960px) {
+  [data-ds-devicetype="t"] {
+    display: block !important;
+  }
+}
+@media
+only screen and (min-width: 961px) and (max-width: 1200px) {
+  [data-ds-devicetype="sm"] {
+    display: block !important;
+  }
+}
+@media
+only screen and (min-width: 1201px) {
+  [data-ds-devicetype="lg"] {
+    display: block !important;
+  }
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  [data-ds-displaytype="retina"] {
+    display: block !important;
+  }
+}
+</style>' | escape }}
+</code>
+</pre>
+            <h3>Markup</h3>
+<pre>
+<code>
+{{'<div class="namespace">
+  <div class="namespace__m-device-selector">
+    <div class="namespace__m-device-selector__item" data-ds-devicetype="m"></div>
+    <div class="namespace__m-device-selector__item" data-ds-devicetype="t"></div>
+    <div class="namespace__m-device-selector__item" data-ds-devicetype="sm"></div>
+    <div class="namespace__m-device-selector__item" data-ds-devicetype="lg"></div>
+    <div class="namespace__m-device-selector__item" data-ds-displaytype="retina"></div>
+  </div>
+</div>' | escape }}
+</code>
+</pre>
+            <h3>JavaScript</h3>
+<pre>
+<code>
+{{"// app
+import DeviceSelector from 'js.device.selector';
+const deviceSelector = new DeviceSelector({
+  'selector': {
+    'name': '.namespace__m-device-selector',
+    'parent': {
+      'name': 'body',
+    },
+    'items': {
+      'name': '.namespace__m-device-selector__item',
+    },
+  },
+  'device': {
+    'selector': {
+      'name': 'data-ds-devicetype',
+    },
+  },
+  'display': {
+    'selector': {
+      'name': 'data-ds-displaytype',
+    },
+  },
+});
+
+// m || t || sm || lg
+console.log(deviceSelector.deviceType());
+// retina || undefined
+console.log(deviceSelector.displayType());" | escape }}
+</code>
+</pre>
+<pre>
+<code>
+{{'<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/js.device.selector/dist/jquery.device.selector.js"></script>
+<script>
+$.fn.deviceSelector({
+  "selector": {
+    "name": ".namespace__m-device-selector",
+    "parent": {
+      "name": ".namespace",
+    },
+    "items": {
+      "name": ".namespace__m-device-selector__item",
+    },
+  },
+  "device": {
+    "selector": {
+      "name": "data-ds-devicetype",
+    },
+  },
+  "display": {
+    "selector": {
+      "name": "data-ds-displaytype",
+    },
+  },
+});
+// mobile || tablet || desktop || large-desktop
+console.log($.fn.deviceSelector.getDeviceType());
+// retina || undefined
+console.log($.fn.deviceSelector.getDisplayType());
+</script>' | escape }}
+</code>
+</pre>
+          </section>
+          </article>
+{% endblock %}

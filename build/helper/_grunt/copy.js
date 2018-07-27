@@ -11,7 +11,7 @@ module.exports = {
   },
   coverageEs6: {
     cwd: '<%= paths.coverage %>/es6/report-html/',
-    dest: '<%= paths.docs %>/<%= paths.coverage %>/es6/',
+    dest: '<%= paths.jsdocs %>/<%= paths.coverage %>/es6/',
     expand: true,
     src: [
       '**',
@@ -19,7 +19,7 @@ module.exports = {
   },
   coverageJquery: {
     cwd: '<%= paths.coverage %>/jquery/report-html/',
-    dest: '<%= paths.docs %>/<%= paths.coverage %>/jquery/',
+    dest: '<%= paths.jsdocs %>/<%= paths.coverage %>/jquery/',
     expand: true,
     src: [
       '**',
@@ -43,7 +43,7 @@ module.exports = {
   },
   static: {
     cwd: '<%= paths.static %>/',
-    dest: '<%= paths.docs %>/<%= paths.static %>/',
+    dest: '<%= paths.jsdocs %>/<%= paths.static %>/',
     expand: true,
     src: [
       '**',

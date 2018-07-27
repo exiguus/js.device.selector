@@ -4,6 +4,8 @@ exclude_patterns:
 - "coverage/"
 - "dist/"
 - "docs/"
+- "tests/"
+- "example/"
 - "node_modules/"
 - "."
 - "Gruntfile.js"

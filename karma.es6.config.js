@@ -10,9 +10,6 @@ module.exports = (config) => {
     files: [{
       pattern: 'src/js/*.class.test.js',
       watched: false,
-    }, {
-      pattern: 'src/js/*.module.test.js',
-      watched: false,
     }],
     browsers: ['PhantomJS'],
     reporters: ['progress', 'coverage'],
@@ -39,7 +36,7 @@ module.exports = (config) => {
           {
             test: /\.js$/,
             loader: 'babel-loader',
-            exclude: /(node_modules)/,
+            exclude: /(node_modules)|^jquery\./,
             options: {
               compact: true,
             },

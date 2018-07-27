@@ -3,11 +3,133 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Device Selector jQuery Plugin</title>
+        <title>Device Selector &mdash; es6 class Plugin</title>
+        <meta name="description" content="Device Selector &mdash; es6 class Plugin :: Make your CSS Breakpoints available in JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <style>
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          body {
+            font: normal 100%/1.2 Arial, Helvetica Neue, Helvetica, sans-serif;
+            color: #F0FFF0;
+            background-color: #838B83;
+          }
+          body.capture .logo {
+            display: none;
+          }
+          header {
+            position: relative;
+            padding: 6em 1em 2em 1em;
+          }
+          header h1 {
+            margin-bottom: .6em;
+          }
+          header h2 {
+            padding-bottom: .8em;
+            border-bottom: 2px solid #C1CDC1;
+          }
+          header .logo {
+            position: absolute;
+            top: 4em;
+            right: 1em;
+            visibility: hidden;
+          }
+          header .logo svg,
+          footer .logo svg {
+            display: inline-block;
+            font-size: inherit;
+            overflow: visible;
+            vertical-align: -.125em;
+            opacity: .7;
+          }
+          header .logo svg.mobile {
+            height: 2em;
+          }
+          header .logo svg.tablet {
+            height: 3em;
+          }
+          header .logo svg.desktop {
+            height: 5em;
+          }
+          header .logo svg.large-desktop {
+            height: 7em;
+          }
+          footer {
+            margin: 0 1em;
+            padding: 2em 0;
+            border-top: 2px solid #C1CDC1;
+          }
+          footer .logo .javascript {
+            height: 1em;
+          }
+          main {
+            padding: 0 1em 2em 1em;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          p {
+            margin-bottom: 1em;
+          }
+          pre,
+          dl {
+            margin-bottom: 4em;
+          }
+          dl::after {
+            content: ' ';
+            display: table;
+            width: 1px;
+            height: 1px;
+            clear: left;
+          }
+          dt, dd {
+            float: left;
+            margin-bottom: .5em;
+            line-height: 2em;
+            min-width: 160px;
+          }
+          dd + dt {
+            clear: left;
+          }
+          dd code {
+            display: inline-block;
+            padding: 0 .4em;
+            margin-left: 1em;
+            min-width: 160px;
+            font-size: 150%;
+            border-left: 1px solid #C1CDC1;
+          }
+          pre {
+            padding: .5em;
+            font-size: 110%;
+            color: #838B83;
+            background-color: #C1CDC1;
+            overflow-x: auto;
+            opacity: .7;
+          }
+          @media
+          only screen and (min-width: 698px) {
+            main {
+              padding: 0 4em 2em 4em;
+            }
+            header {
+              padding: 6em 4em 2em 4em;
+            }
+            header .logo {
+              right: 4em;
+              visibility: visible;
+            }
+            footer {
+              margin: 0 4em;
+            }
+            pre {
+              padding: .5em 1em;
+            }
+          }
+
           [data-device-selector-item] {
             display: none;
           }
@@ -51,15 +173,30 @@
     <body class="development">
         <header>
           <h1>Device Selector</h1>
-          <h2>jQuery Plugin</h2>
+          <h2>es6 class Plugin</h2>
+          <p>Make your CSS Breakpoints available in JavaScript</p>
+          <div class="logo">
+            <svg aria-hidden="true" data-icon="mobile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mobile"><path fill="currentColor" d="M192 416c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zM320 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h224c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V48z"></path></svg>
+            <svg aria-hidden="true" data-icon="tablet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="tablet"><path fill="currentColor" d="M256 416c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-21.3 14.3-32 32-32s32 14.3 32 32zM448 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h352c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V48z"></path></svg>
+            <svg aria-hidden="true" data-icon="desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="desktop"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v288c0 26.5 21.5 48 48 48h192l-24 96h-72c-8.8 0-16 7.2-16 16s7.2 16 16 16h288c8.8 0 16-7.2 16-16s-7.2-16-16-16h-72l-24-96h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM249 480l16-64h46l16 64h-78zm295-144c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h480c8.8 0 16 7.2 16 16v288z"></path></svg>
+            <svg aria-hidden="true" data-icon="large-desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="large-desktop"><path fill="currentColor" d="M592 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h256v64H144c-8.8 0-16 7.2-16 16s7.2 16 16 16h352c8.8 0 16-7.2 16-16s-7.2-16-16-16H336v-64h256c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm16 368c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h544c8.8 0 16 7.2 16 16v320z"></path></svg>
+          </div>
         </header>
 
         <main>
           <article>
             <h2>Select Device Type</h2>
-            <p>DeviceType: <tt id="deviceType"></tt></p>
+            <dl>
+              <dt>DeviceType</dt>
+              <dd><code id="deviceType">not set</code></dd>
+              <dt>WindowInnerWidth</dt>
+              <dd><code id="windowInnerWidth">not set</code></dd>
+            </dl>
             <h2>Select Display Type</h2>
-            <p>DisplayType: <tt id="displayType"></tt></p>
+            <dl>
+              <dt>DisplayType</dt>
+              <dd><code id="displayType">not set</code></dd>
+            </dl>
             <h2>CSS</h2>
 <pre>
   <code>
@@ -134,7 +271,8 @@
 
           </article>
         </main>
-        <!-- <div class="namespace">
+        <!-- custom
+        <div class="namespace">
           <div class="namespace__m-device-selector">
             <div class="namespace__m-device-selector__item" data-ds-devicetype="mobile"></div>
             <div class="namespace__m-device-selector__item" data-ds-devicetype="tablet"></div>
@@ -142,7 +280,8 @@
             <div class="namespace__m-device-selector__item" data-ds-devicetype="large-desktop"></div>
             <div class="namespace__m-device-selector__item" data-ds-displaytype="retina"></div>
           </div>
-        </div> -->
+        </div>
+        -->
         <div data-device-selector>
           <div data-device-selector-item data-device-selector-devicetype="mobile"></div>
           <div data-device-selector-item data-device-selector-devicetype="tablet"></div>

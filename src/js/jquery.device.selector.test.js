@@ -42,9 +42,39 @@ QUnit.module('Test Device Selector jQuery Plugin', function(hooks) {
       true,
       'getDisplayType() is undefined'
     );
+    assert.equal(
+      typeof $.fn.deviceSelector.defaults === 'object',
+      true,
+      'defaults is object'
+    );
+    assert.deepEqual(
+      $.fn.deviceSelector.defaults,
+      {
+        'selector': {
+          'name': '[data-device-selector]',
+          'parent': {
+            'name': 'body',
+          },
+          'items': {
+            'name': '[data-device-selector-item]',
+          },
+        },
+        'device': {
+          'selector': {
+            'name': 'data-device-selector-devicetype',
+          },
+        },
+        'display': {
+          'selector': {
+            'name': 'data-device-selector-displaytype',
+          },
+        },
+      },
+      'defaults is eq object'
+    );
   });
 
-  QUnit.test('$.fn.deviceSelector false', function(assert) {
+  QUnit.test('$.fn.deviceSelector fail', function(assert) {
     var element = // eslint-disable-line no-var
       '<div data-device-selector>' +
         '<div data-device-selector-item></div>' +
@@ -81,13 +111,13 @@ QUnit.module('Test Device Selector jQuery Plugin', function(hooks) {
     $.fn.deviceSelector();
     assert.equal(
       typeof $.fn.deviceSelector.getDeviceType() === 'string' ||
-      typeof $.fn.deviceSelector.getDeviceType() === 'object',
+      typeof $.fn.deviceSelector.getDeviceType() === 'undefined',
       true,
       'getDeviceType() is String'
     );
     assert.equal(
       typeof $.fn.deviceSelector.getDisplayType() === 'string' ||
-      typeof $.fn.deviceSelector.getDisplayType() === 'object',
+      typeof $.fn.deviceSelector.getDisplayType() === 'undefined',
       true,
       'getDisplayType() is String'
     );
@@ -114,13 +144,13 @@ QUnit.module('Test Device Selector jQuery Plugin', function(hooks) {
     customParent.deviceSelector();
     assert.equal(
       typeof customParent.deviceSelector.getDeviceType() === 'string' ||
-      typeof customParent.deviceSelector.getDeviceType() === 'object',
+      typeof customParent.deviceSelector.getDeviceType() === 'undefined',
       true,
       'getDeviceType() is String'
     );
     assert.equal(
       typeof customParent.deviceSelector.getDisplayType() === 'string' ||
-      typeof customParent.deviceSelector.getDisplayType() === 'object',
+      typeof customParent.deviceSelector.getDisplayType() === 'undefined',
       true,
       'getDisplayType() is String'
     );
@@ -149,7 +179,7 @@ QUnit.module('Test Device Selector jQuery Plugin', function(hooks) {
         'parent': {
           'name': '.namespace',
         },
-        'item': {
+        'items': {
           'name': '.namespace__m-device-selector__item',
         },
       },
@@ -166,13 +196,13 @@ QUnit.module('Test Device Selector jQuery Plugin', function(hooks) {
     });
     assert.equal(
       typeof $.fn.deviceSelector.getDeviceType() === 'string' ||
-      typeof $.fn.deviceSelector.getDeviceType() === 'object',
+      typeof $.fn.deviceSelector.getDeviceType() === 'undefined',
       true,
       'getDeviceType() is String'
     );
     assert.equal(
       typeof $.fn.deviceSelector.getDisplayType() === 'string' ||
-      typeof $.fn.deviceSelector.getDisplayType() === 'object',
+      typeof $.fn.deviceSelector.getDisplayType() === 'undefined',
       true,
       'getDisplayType() is String'
     );

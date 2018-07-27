@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Device Selector &mdash; jQuery Plugin</title>
+        <meta name="description" content="Device Selector &mdash; jQuery Plugin :: Make your CSS Breakpoints available in JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="static/css/style.css">
+    </head>
+    <body class="development">
+      <header>
+        <h1>Device Selector</h1>
+        <h2>ES6 Class and jQuery Plugin</h2>
+        <p>Make your CSS Breakpoints available in JavaScript</p>
+        <div class="logo">
+          <svg aria-hidden="true" data-icon="mobile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="mobile"><path fill="currentColor" d="M192 416c0 17.7-14.3 32-32 32s-32-14.3-32-32 14.3-32 32-32 32 14.3 32 32zM320 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h224c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V48z"></path></svg>
+          <svg aria-hidden="true" data-icon="tablet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="tablet"><path fill="currentColor" d="M256 416c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-21.3 14.3-32 32-32s32 14.3 32 32zM448 48v416c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V48C0 21.5 21.5 0 48 0h352c26.5 0 48 21.5 48 48zm-32 0c0-8.8-7.2-16-16-16H48c-8.8 0-16 7.2-16 16v416c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V48z"></path></svg>
+          <svg aria-hidden="true" data-icon="desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="desktop"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v288c0 26.5 21.5 48 48 48h192l-24 96h-72c-8.8 0-16 7.2-16 16s7.2 16 16 16h288c8.8 0 16-7.2 16-16s-7.2-16-16-16h-72l-24-96h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM249 480l16-64h46l16 64h-78zm295-144c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h480c8.8 0 16 7.2 16 16v288z"></path></svg>
+          <svg aria-hidden="true" data-icon="large-desktop" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="large-desktop"><path fill="currentColor" d="M592 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h256v64H144c-8.8 0-16 7.2-16 16s7.2 16 16 16h352c8.8 0 16-7.2 16-16s-7.2-16-16-16H336v-64h256c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm16 368c0 8.8-7.2 16-16 16H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h544c8.8 0 16 7.2 16 16v320z"></path></svg>
+        </div>
+      </header>
+
+      <main>
+
+        {% block content %}
+        {% endblock %}
+
+      </main>
+      <footer>
+        <ul>
+          <li><a title="Github" href="https://github.com/exiguus/js.device.selector">git</a></li>
+          <li><a title="NPM JS" href="https://www.npmjs.com/package/js.device.selector">npm</a></li>
+          <li><a title="JSDOC" href="https://exiguus.github.io/js.device.selector/jsdoc/index.html">docs</a></li>
+          <li><a title="Coverage jQuery lcov-report" href="https://exiguus.github.io/js.device.selector/coverage/es6/index.html">jQuery coverage</a></li>
+          <li><a title="Coverage es6 lcov-report" href="https://exiguus.github.io/js.device.selector/coverage/es6/index.html">es6 coverage</a></li>
+          <li><a title="License MIT" href="https://github.com/exiguus/js.device.selector/blob/master/LICENSE">MIT license</a></li>
+        </ul>
+        <p>
+          <a href="https://github.com/exiguus/js.device.selector" title="Device Selector &mdash; Make your CSS Breakpoints available in JavaScript">
+            <span class="logo">
+              <svg aria-hidden="true" data-icon="javascript" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="javascript"><path fill="currentColor" d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
+            </span>
+            Device Selector
+          </a>
+        </p>
+      </footer>
+      <div data-device-selector>
+        <div data-device-selector-item data-device-selector-devicetype="mobile"></div>
+        <div data-device-selector-item data-device-selector-devicetype="tablet"></div>
+        <div data-device-selector-item data-device-selector-devicetype="desktop"></div>
+        <div data-device-selector-item data-device-selector-devicetype="large-desktop"></div>
+        <div data-device-selector-item data-device-selector-displaytype="retina"></div>
+      </div>
+      <script src="static/js/jquery/dist/jquery.min.js"></script>
+      <script src="static/js/js.device.selector/jquery.device.selector.min.js"></script>
+      <script async>
+        $(document).ready(updateDomContent);
+        $(window).on('resize', updateDomContent);
+        function updateDomContent() {
+          $.fn.deviceSelector();
+          $('#deviceType').text($.fn.deviceSelector.getDeviceType());
+          $('#displayType').text($.fn.deviceSelector.getDisplayType());
+          $('#windowInnerWidth').text(window.innerWidth + 'px');
+          $('.logo svg').css('opacity', '.7');
+          $('.logo svg.' + $.fn.deviceSelector.getDeviceType()).css('opacity', '1');
+        }
+      </script>
+      <script async>
+        var link = document.createElement( 'link' );
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css';
+        link.rel = 'stylesheet';document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+      <script async>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
