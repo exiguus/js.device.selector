@@ -330,19 +330,19 @@ document.querySelector('#displayType').innerHTML = deviceSelector.displayType();
 ## Documentation
 * [example](https://exiguus.github.io/js.device.selector/)
 * [jsDoc](https://exiguus.github.io/js.device.selector/jsdoc/)
-* [Coverage ES6](https://exiguus.github.io/js.device.selector/coverage/es6/)
-* [Coverage jQuery](https://exiguus.github.io/js.device.selector/coverage/jquery/)
+* [Coverage ES6](https://exiguus.github.io/js.device.selector/jsdoc/coverage/es6/)
+* [Coverage jQuery](https://exiguus.github.io/js.device.selector/jsdoc/coverage/jquery/)
 
 [tests]: https://img.shields.io/travis/exiguus/js.device.selector/master.svg
 [tests-url]: https://travis-ci.org/exiguus/js.device.selector
 
 [maintainability]:
-https://api.codeclimate.com/v1/badges/8b7c86a67b5706e9be47/maintainability
+https://api.codeclimate.com/v1/badges/587cd2b7452371bbd8a6/maintainability
 [maintainability-url]:
 https://codeclimate.com/github/exiguus/js.device.selector/maintainability
 
 [coverage]:
-https://api.codeclimate.com/v1/badges/8b7c86a67b5706e9be47/test_coverage
+https://api.codeclimate.com/v1/badges/587cd2b7452371bbd8a6/test_coverage
 [coverage-url]:
 https://codeclimate.com/github/exiguus/js.device.selector/test_coverage
 
