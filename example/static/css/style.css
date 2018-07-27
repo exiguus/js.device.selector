@@ -252,7 +252,7 @@ pre.inline {
   background: transparent !important;
 }
 
-@media only screen and (min-width: 698px) {
+@media only screen and (min-width: 782px) {
   main {
     padding: 0 4em 2em 4em;
   }
