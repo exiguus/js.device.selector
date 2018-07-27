@@ -139,11 +139,8 @@ footer ul {
 
 footer ul li {
   display: inline-block;
+  margin-right: .4em;
   list-style: none;
-}
-
-footer ul li+li {
-  margin-left: .4em;
 }
 
 footer ul li a {
