@@ -230,7 +230,7 @@ Style for hidden Markup that make CSS Breakpoints available in JavaScript via Me
 </div>
 ```
 
-Initialise the jQuery Plugin and sample usage.
+Import the ES6 Class and sample usage.
 
 ```js
 import DeviceSelector from './js/device.selector.class';
@@ -328,7 +328,7 @@ document.querySelector('#displayType').innerHTML = deviceSelector.displayType();
 ```
 
 ## Documentation
-* [example](https://exiguus.github.io/js.device.selector/)
+* [Example](https://exiguus.github.io/js.device.selector/)
 * [jsDoc](https://exiguus.github.io/js.device.selector/jsdoc/)
 * [Coverage ES6](https://exiguus.github.io/js.device.selector/jsdoc/coverage/es6/)
 * [Coverage jQuery](https://exiguus.github.io/js.device.selector/jsdoc/coverage/jquery/)

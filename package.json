@@ -103,6 +103,7 @@
   ],
   "main": "dist/device.selector.class.js",
   "author": "Simon Gattner <npm@0x38.de>",
+  "homepage": "https://exiguus.github.io/js.device.selector/",
   "license": "MIT",
   "repository": {
     "type": "git",
