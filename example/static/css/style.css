@@ -149,6 +149,7 @@ footer ul li a {
 }
 
 main {
+  display: block;
   padding: 0 1em 2em 1em;
 }
 
