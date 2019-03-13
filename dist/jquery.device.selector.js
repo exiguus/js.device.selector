@@ -3,7 +3,7 @@
   Get the current Display and Device Type of a Browser
  * @author Simon Gattner <npm@0x38.de>
  * @license MIT
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 /**
