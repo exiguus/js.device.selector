@@ -55,27 +55,37 @@ export default class DeviceSelector {
       this._settings.selector.name + ' ' +
       this._settings.selector.items.name
     );
-    this._displayTypeName = () =>
-      (this._items.length > 0) ?
-      '' + Array.prototype.slice.call(this._items).filter((item) =>
-        (item.offsetWidth > 0 || item.offsetHeight > 0) &&
-        item.getAttribute(this._settings.display.selector.name)
-      )[0].getAttribute(this._settings.display.selector.name) : undefined;
-    this._deviceTypeName = () =>
-      (this._items.length > 0) ?
-      '' + Array.prototype.slice.call(this._items).filter((item) =>
-        (item.offsetWidth > 0 || item.offsetHeight > 0) &&
-        item.getAttribute(this._settings.device.selector.name)
-      )[0].getAttribute(this._settings.device.selector.name) : undefined;
+    this._displayType = (
+      item = (this._items && this._items.length > 0) ?
+        Array.prototype.slice.call(this._items)
+          .filter((item) =>
+            (item.offsetWidth > 0 || item.offsetHeight > 0) &&
+            item.hasAttribute(this._settings.display.selector.name)
+          ) :
+      null
+    ) => (item && item.length > 0) ?
+      '' + item[0].getAttribute(this._settings.display.selector.name) :
+      undefined;
+    this._deviceType = (
+      item = (this._items && this._items.length > 0) ?
+        Array.prototype.slice.call(this._items)
+          .filter((item) =>
+            (item.offsetWidth > 0 || item.offsetHeight > 0) &&
+            item.hasAttribute(this._settings.device.selector.name)
+          ) :
+      null
+    ) => (item && item.length > 0) ?
+      '' + item[0].getAttribute(this._settings.device.selector.name) :
+      undefined;
   }
   /**
-   * Get the current Device Type.
+   * Get the current Device Type; //  Device Type.
    * @function DeviceSelector.deviceType
    * @param {string} string The current Device Type.
    * @return {string | undefined} The current Device Type Name.
    */
   get deviceType() {
-    return this._deviceTypeName;
+    return this._deviceType;
   }
   /**
    * Get the current Display Type.
@@ -84,6 +94,6 @@ export default class DeviceSelector {
    * @return {string | undefined} The current Display Type Name.
    */
   get displayType() {
-    return this._displayTypeName;
+    return this._displayType;
   }
 }

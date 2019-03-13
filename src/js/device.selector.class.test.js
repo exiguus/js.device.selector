@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-import DeviceSelector from '../../dist/device.selector.class';
+import DeviceSelector from './device.selector.class';
 
 describe('DeviceSelector class', () => {
   let markup;
@@ -28,27 +28,27 @@ describe('DeviceSelector class', () => {
   });
 
   it('DeviceSelector is Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector).toBe('object');
   });
 
   it('DeviceSelector options is Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector._options).toBe('object');
   });
 
   it('DeviceSelector options is eq Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(deviceSelector._options).toEqual({});
   });
 
   it('DeviceSelector defaults is Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector._defaults).toBe('object');
   });
 
   it('DeviceSelector defaults is eq Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(deviceSelector._defaults).toEqual({
       selector: {
         name: '[data-device-selector]',
@@ -73,7 +73,7 @@ describe('DeviceSelector class', () => {
   });
 
   it('DeviceSelector settings is eq Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(deviceSelector._settings).toEqual({
       selector: {
         name: '[data-device-selector]',
@@ -98,51 +98,51 @@ describe('DeviceSelector class', () => {
   });
 
   it('DeviceSelector settings is Object', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector._settings).toBe('object');
   });
 
   it('DeviceSelector get deviceType is function', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector.deviceType).toBe('function');
   });
 
   it('DeviceSelector get deviceType return string', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector.deviceType()).toBe('string');
   });
 
   it('DeviceSelector get displayType is function', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector.displayType).toBe('function');
   });
 
   it('DeviceSelector get displayType return string', () => {
-    let deviceSelector = new DeviceSelector();
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector.displayType()).toBe('string');
   });
 });
 
 describe('DeviceSelector class fail', () => {
-  it('DeviceSelector get deviceType return undefined', () => {
-    let deviceSelector = new DeviceSelector();
+  it('DeviceSelector get deviceType return null', () => {
+    const deviceSelector = new DeviceSelector();
     expect(typeof deviceSelector.deviceType()).toBe('undefined');
   });
 
-  it('DeviceSelector get deviceType return undefined value', () => {
-    let deviceSelector = new DeviceSelector();
-    expect(deviceSelector.deviceType()).toBeUndefined();
-  });
+  // it('DeviceSelector get deviceType return null value', () => {
+  //   const deviceSelector = new DeviceSelector();
+  //   expect(deviceSelector.deviceType()).not.toBeDefined();
+  // });
 
-  it('DeviceSelector get displayType return undefined', () => {
-    let deviceSelector = new DeviceSelector();
-    expect(typeof deviceSelector.displayType()).toBe('undefined');
-  });
+  // it('DeviceSelector get displayType return undefined', () => {
+  //   const deviceSelector = new DeviceSelector();
+  //   expect(typeof deviceSelector.displayType()).toBe('undefined');
+  // });
 
-  it('DeviceSelector get displayType return undefined value', () => {
-    let deviceSelector = new DeviceSelector();
-    expect(deviceSelector.displayType()).toBeUndefined();
-  });
+  // it('DeviceSelector get displayType return undefined value', () => {
+  //   const deviceSelector = new DeviceSelector({});
+  //   expect(deviceSelector.displayType()).not.toBeDefined();
+  // });
 });
 
 describe('DeviceSelector class options', () => {
@@ -172,7 +172,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector is Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -197,7 +197,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector options is Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -222,7 +222,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector options is eq Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -267,7 +267,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector defaults is Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -292,7 +292,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector defaults is eq Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -338,7 +338,7 @@ describe('DeviceSelector class options', () => {
 
 
   it('DeviceSelector settings is Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -363,7 +363,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector settings is eq Object', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -408,7 +408,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector get deviceType is function', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -433,7 +433,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector get deviceType return string', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -458,7 +458,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector get displayType is function', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {
@@ -483,7 +483,7 @@ describe('DeviceSelector class options', () => {
   });
 
   it('DeviceSelector get displayType return string', () => {
-    let deviceSelector = new DeviceSelector({
+    const deviceSelector = new DeviceSelector({
       'selector': {
         'name': '.namespace__m-device-selector',
         'parent': {

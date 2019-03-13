@@ -20,6 +20,12 @@ module.exports = {
           return dst + '/' + src.replace('.js', '.min.js');
         },
       },
+      {
+        expand: true,
+        cwd: '<%= paths.dist %>/js/',
+        src: '<%= name.plugin %>.min.js',
+        dest: '<%= paths.dist %>',
+      },
     ],
   },
 };

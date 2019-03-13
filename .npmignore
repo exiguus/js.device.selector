@@ -1,6 +1,5 @@
 build/
 example/
-src/
 node_modules/
 static/
 target/
@@ -11,10 +10,9 @@ coverage/
 .editorconfig
 .eslintrc
 .gitignore
+.travis.yml
+.codeclimate.yml
 .npmrc
 .npmignore
 Gruntfile.js
-jsdoc.json
-karma.*.js
-webpack.*.js
 package-lock.json

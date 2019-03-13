@@ -1,3 +1,8 @@
+const webpack = require('webpack');
+
+// Is the current build a development build
+const IS_DEV = (process.env.NODE_ENV === 'dev');
+
 module.exports = (config) => {
   config.set({
     plugins: [
@@ -8,16 +13,16 @@ module.exports = (config) => {
     ],
     frameworks: ['jasmine'],
     files: [{
-      pattern: 'src/js/*.class.test.js',
+      pattern: '../src/js/*.class.test.js',
       watched: false,
     }],
     browsers: ['PhantomJS'],
     reporters: ['progress', 'coverage'],
     preprocessors: {
-      'src/js/*.js': ['webpack', 'coverage'],
+      '../src/js/*.class.test.js': ['webpack'],
     },
     coverageReporter: {
-      dir: 'coverage/es6',
+      dir: '../coverage/es6',
       reporters: [
         {type: 'html', subdir: 'report-html'},
         {type: 'lcov', subdir: 'report-lcov'},
@@ -30,19 +35,32 @@ module.exports = (config) => {
     },
     webpack: {
       mode: 'production',
+      devtool: '#inline-source-map',
       module: {
         rules: [
           // BABEL
           {
             test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: /(node_modules)|^jquery\./,
-            options: {
-              compact: true,
-            },
+            exclude: /(node_modules)/,
+            use: [
+              {
+                loader: 'babel-loader',
+              },
+              {
+                loader: 'istanbul-instrumenter-loader',
+                options: {
+                    esModules: true,
+                },
+              },
+            ],
           },
         ],
       },
+      plugins: [
+        new webpack.DefinePlugin({
+          IS_DEV: IS_DEV,
+        }),
+      ],
     },
   });
 };
