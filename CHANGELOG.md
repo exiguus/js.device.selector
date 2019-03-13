@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.1
+* refactor es6 module
+* refactor build, tests and coverage
+
 ## 1.0.0
 ### Feature
 * jQuery Device Selector Plugin
