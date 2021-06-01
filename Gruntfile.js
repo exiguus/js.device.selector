@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'eslint',
-    // 'webpack', umd bundle
+    'webpack',
     'uglify',
   ]);
 

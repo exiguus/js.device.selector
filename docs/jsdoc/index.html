@@ -46,10 +46,16 @@
         <article><p><a href="https://travis-ci.org/exiguus/js.device.selector"><img src="https://img.shields.io/travis/exiguus/js.device.selector/master.svg" alt="tests"></a>
 <a href="https://codeclimate.com/github/exiguus/js.device.selector/test_coverage"><img src="https://api.codeclimate.com/v1/badges/587cd2b7452371bbd8a6/test_coverage" alt="coverage"></a>
 <a href="https://codeclimate.com/github/exiguus/js.device.selector/maintainability"><img src="https://api.codeclimate.com/v1/badges/587cd2b7452371bbd8a6/maintainability" alt="maintainability"></a></p>
-<h1>js.device.selector</h1><p>ES6 class and jQuery Plugin which get the current Device Type and Display Type of a Browser while making CSS Breakpoints available in JavaScript.</p>
+<h1>js.device.selector</h1>
+<p>ES6 class and jQuery Plugin which get the current Device Type and Display Type of a Browser while making CSS Breakpoints available in JavaScript.</p>
 <p>This solution make it possible to define your breakpoints only once (in CSS) and pass them automatically into JavaScript.</p>
-<h2>npm</h2><p><a href="https://npmjs.com/package/js.device.selector"><img src="https://img.shields.io/npm/v/js.device.selector.svg" alt="npm"></a></p>
-<pre class="prettyprint source"><code>npm install --save js.device.selector</code></pre><h2>Example</h2><h3>jQuery plugin</h3><p>Style for hidden Markup that make CSS Breakpoints available in JavaScript via Media-Queries and visibility.</p>
+<h2>npm</h2>
+<p><a href="https://npmjs.com/package/js.device.selector"><img src="https://img.shields.io/npm/v/js.device.selector.svg" alt="npm"></a></p>
+<pre class="prettyprint source"><code>npm install --save js.device.selector
+</code></pre>
+<h2>Example</h2>
+<h3>jQuery plugin</h3>
+<p>Style for hidden Markup that make CSS Breakpoints available in JavaScript via Media-Queries and visibility.</p>
 <pre class="prettyprint source lang-html"><code>&lt;style>
 
   [data-device-selector-item] {
@@ -90,14 +96,18 @@
       display: block !important;
     }
   }
-&lt;/style></code></pre><p> Markup which make the visibility of Breakpoints available in JavaScript. The Markup should be added right before the closing body tag.</p>
+&lt;/style>
+</code></pre>
+<p>Markup which make the visibility of Breakpoints available in JavaScript. The Markup should be added right before the closing body tag.</p>
 <pre class="prettyprint source lang-html"><code>&lt;div data-device-selector>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;mobile&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;tablet&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;desktop&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;large-desktop&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-displaytype=&quot;retina&quot;>&lt;/div>
-&lt;/div></code></pre><p>Initialise the jQuery Plugin and sample usage.</p>
+&lt;/div>
+</code></pre>
+<p>Initialise the jQuery Plugin and sample usage.</p>
 <pre class="prettyprint source lang-html"><code>&lt;script src=&quot;../node_modules/jquery/dist/jquery.min.js&quot;>&lt;/script>
 &lt;script src=&quot;../node_modules/js.device.selector/jquery.device.selector.min.js&quot;>&lt;/script>
 &lt;script>
@@ -105,7 +115,10 @@
   console.log($.fn.deviceSelector.getDeviceType()); // return mobile || tablet || desktop || large-desktop
   $('#deviceType').text($.fn.deviceSelector.getDeviceType());
   $('#displayType').text($.fn.deviceSelector.getDisplayType());
-&lt;/script></code></pre><h3>jQuery Plugin Custom</h3><p>Use your own flavored Markup and pass your own settings to the Device Selector.</p>
+&lt;/script>
+</code></pre>
+<h3>jQuery Plugin Custom</h3>
+<p>Use your own flavored Markup and pass your own settings to the Device Selector.</p>
 <pre class="prettyprint source lang-html"><code>&lt;style>
 
   .namespace__m-device-selector__item {
@@ -181,7 +194,10 @@
   console.log($.fn.deviceSelector.getDeviceType()); // return m || t || md || lg
   $('#deviceType').text($.fn.deviceSelector.getDeviceType());
   $('#displayType').text($.fn.deviceSelector.getDisplayType());
-&lt;/script></code></pre><h3>ES6 class</h3><p>Style for hidden Markup that make CSS Breakpoints available in JavaScript via Media-Queries and visibility.</p>
+&lt;/script>
+</code></pre>
+<h3>ES6 class</h3>
+<p>Style for hidden Markup that make CSS Breakpoints available in JavaScript via Media-Queries and visibility.</p>
 <pre class="prettyprint source lang-html"><code>&lt;style>
 
   [data-device-selector-item] {
@@ -222,21 +238,28 @@
       display: block !important;
     }
   }
-&lt;/style></code></pre><p> Markup which make the visibility of Breakpoints available in JavaScript. The Markup should be added right before the closing body tag.</p>
+&lt;/style>
+</code></pre>
+<p>Markup which make the visibility of Breakpoints available in JavaScript. The Markup should be added right before the closing body tag.</p>
 <pre class="prettyprint source lang-html"><code>&lt;div data-device-selector>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;mobile&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;tablet&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;desktop&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-devicetype=&quot;large-desktop&quot;>&lt;/div>
   &lt;div data-device-selector-item data-device-selector-displaytype=&quot;retina&quot;>&lt;/div>
-&lt;/div></code></pre><p>Import the ES6 Class and sample usage.</p>
+&lt;/div>
+</code></pre>
+<p>Import the ES6 Class and sample usage.</p>
 <pre class="prettyprint source lang-js"><code>import DeviceSelector from './js/device.selector.class';
 const deviceSelector = new DeviceSelector();
 
 console.log($.fn.deviceSelector.getDeviceType()); // return m || t || md || lg
 document.querySelector('#deviceType').innerHTML = deviceSelector.deviceType();
 document.querySelector('#displayType').innerHTML = deviceSelector.displayType();
-&lt;/script></code></pre><h3>ES6 Class Custom</h3><pre class="prettyprint source lang-html"><code>&lt;style>
+&lt;/script>
+</code></pre>
+<h3>ES6 Class Custom</h3>
+<pre class="prettyprint source lang-html"><code>&lt;style>
 
   .namespace__m-device-selector__item {
     display: none;
@@ -285,7 +308,9 @@ document.querySelector('#displayType').innerHTML = deviceSelector.displayType();
     &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-devicetype=&quot;lg&quot;>&lt;/div>
     &lt;div class=&quot;namespace__m-device-selector__item&quot; data-ds-displaytype=&quot;rt&quot;>&lt;/div>
   &lt;/div>
-&lt;/div></code></pre><pre class="prettyprint source lang-js"><code>import DeviceSelector from './js/device.selector.class';
+&lt;/div>
+</code></pre>
+<pre class="prettyprint source lang-js"><code>import DeviceSelector from './js/device.selector.class';
 const deviceSelector = new DeviceSelector({
   'selector': {
     'name': '.namespace__m-device-selector',
@@ -311,7 +336,10 @@ const deviceSelector = new DeviceSelector({
 console.log($.fn.deviceSelector.getDeviceType()); // return m || t || md || lg
 document.querySelector('#deviceType').innerHTML = deviceSelector.deviceType();
 document.querySelector('#displayType').innerHTML = deviceSelector.displayType();
-</code></pre><h2>Documentation</h2><ul>
+
+</code></pre>
+<h2>Documentation</h2>
+<ul>
 <li><a href="https://exiguus.github.io/js.device.selector/">Example</a></li>
 <li><a href="https://exiguus.github.io/js.device.selector/jsdoc/">jsDoc</a></li>
 <li><a href="https://exiguus.github.io/js.device.selector/jsdoc/coverage/es6/">Coverage ES6</a></li>
@@ -547,7 +575,7 @@ document.querySelector('#displayType').innerHTML = deviceSelector.displayType();
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 13 2019 23:19:24 GMT+0100 (Central European Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Tue Jun 01 2021 14:01:16 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
